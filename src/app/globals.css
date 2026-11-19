@@ -1,0 +1,62 @@
+@import "tailwindcss";
+
+@theme inline {
+  --font-sans: var(--font-outfit), ui-sans-serif, system-ui, sans-serif;
+
+  /* Yaadhum brand — black, crimson, gold */
+  --color-brand-50: #fff5e8;
+  --color-brand-100: #ffe4c2;
+  --color-brand-200: #ffc878;
+  --color-brand-300: #f0a84a;
+  --color-brand-400: #e88b2e;
+  --color-brand-500: #d94a2a;
+  --color-brand-600: #c8102e;
+  --color-brand-700: #9e0c24;
+  --color-brand-800: #6b0818;
+  --color-brand-900: #3d040d;
+
+  --color-ink-950: #050505;
+  --color-ink-900: #0a0a0a;
+  --color-ink-850: #111111;
+  --color-ink-800: #161616;
+  --color-ink-700: #1e1e1e;
+  --color-ink-600: #2a2a2a;
+  --color-ink-500: #3d3d3d;
+
+  --color-cream-50: #fff8ef;
+  --color-cream-100: #f7f0e6;
+  --color-cream-200: #e8dfd2;
+  --color-cream-300: #c9bdb0;
+  --color-cream-400: #9a8f84;
+  --color-cream-500: #6e655c;
+}
+
+@layer base {
+  html {
+    color-scheme: dark;
+  }
+
+  body {
+    background-color: var(--color-ink-950);
+    background-image:
+      radial-gradient(ellipse 80% 50% at 50% -20%, rgba(200, 16, 46, 0.18), transparent 55%),
+      radial-gradient(ellipse 60% 40% at 100% 0%, rgba(232, 168, 74, 0.08), transparent 45%);
+    background-attachment: fixed;
+    color: var(--color-cream-100);
+  }
+
+  ::selection {
+    background: rgba(200, 16, 46, 0.45);
+    color: var(--color-cream-50);
+  }
+
+  option {
+    background-color: var(--color-ink-850);
+    color: var(--color-cream-100);
+  }
+
+  input[type="time"],
+  input[type="date"] {
+    color-scheme: dark;
+  }
+}
